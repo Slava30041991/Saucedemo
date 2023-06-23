@@ -1,10 +1,12 @@
+package miscellaneous;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import page.InventoryPage;
-import page.RegistrationPage;
+import page.LoginPage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +24,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         InventoryPage inventoryPage = new InventoryPage(driver);
-        RegistrationPage registrationPage = new RegistrationPage(driver);
+        LoginPage registrationPage = new LoginPage(driver);
 
 
     }
